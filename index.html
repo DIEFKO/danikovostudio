@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANIKOVO ÚŽASNÉ STUDIO</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 1s;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20vh;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>DANIKOVO ÚŽASNÉ STUDIO</h1>
+    <button onclick="downloadGame1()">Stáhnout 1.1</button>
+    <img src="heladisita-the-rock.gif"></img>
+    <script>
+        function changeBackgroundColor() {
+            const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ff99ff', '#99ffff'];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+        setInterval(changeBackgroundColor, 2000);
+
+        function downloadGame1() {
+            const link = document.createElement('a');
+            link.href = 'danikova uzasna klikaci hra 1.1.zip'; // Ujisti se, že soubor existuje v root složce serveru
+            link.download = 'danikova uzasna klikaci hra 1.1.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+<button onclick="downloadGame()">Stáhnout 1.0</button>
+<script>
+    function changeBackgroundColor() {
+        const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ff99ff', '#99ffff'];
+        document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    }
+    setInterval(changeBackgroundColor, 2000);
+
+    function downloadGame() {
+        const link = document.createElement('a');
+        link.href = 'DANIKOVA UZASNA HRA 1.0.zip'; // Ujisti se, že soubor existuje v root složce serveru
+        link.download = 'danikova uzasna klikaci hra 1.1.zip';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+</html>
